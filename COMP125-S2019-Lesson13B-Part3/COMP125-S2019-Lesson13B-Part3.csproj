@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0145D206-E1B8-43D4-AF42-79C653C83AFA}</ProjectGuid>
+    <ProjectGuid>{019C5E0A-29F2-426A-9B65-0B6FF6D6E20E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>COMP125_S2019_Lesson13B_Part1</RootNamespace>
-    <AssemblyName>COMP125-S2019-Lesson13B-Part1</AssemblyName>
+    <RootNamespace>COMP125_S2019_Lesson13B_Part3</RootNamespace>
+    <AssemblyName>COMP125-S2019-Lesson13B-Part3</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,17 +48,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Views\MasterForm.cs">
+    <Compile Include="Views\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\MasterForm.Designer.cs">
-      <DependentUpon>MasterForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\StartForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\StartForm.Designer.cs">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <Compile Include="Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -69,11 +63,8 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Views\MasterForm.resx">
-      <DependentUpon>MasterForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Views\StartForm.resx">
-      <DependentUpon>StartForm.cs</DependentUpon>
+    <EmbeddedResource Include="Views\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
