@@ -42,9 +42,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.SourceLabel = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,6 +77,9 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.SourceTextBox = new System.Windows.Forms.TextBox();
+            this.TargetLabel = new System.Windows.Forms.Label();
+            this.TargetTextBox = new System.Windows.Forms.TextBox();
             this.MainTabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -118,16 +119,17 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 40);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(776, 493);
+            this.tabPage2.Size = new System.Drawing.Size(752, 213);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Main";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label3);
-            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.TargetTextBox);
+            this.tabPage3.Controls.Add(this.TargetLabel);
+            this.tabPage3.Controls.Add(this.SourceTextBox);
+            this.tabPage3.Controls.Add(this.SourceLabel);
             this.tabPage3.Location = new System.Drawing.Point(4, 40);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -245,32 +247,14 @@
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // SourceLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 46);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(86, 31);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 81);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 31);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(40, 116);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 31);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "label4";
+            this.SourceLabel.AutoSize = true;
+            this.SourceLabel.Location = new System.Drawing.Point(18, 17);
+            this.SourceLabel.Name = "SourceLabel";
+            this.SourceLabel.Size = new System.Drawing.Size(100, 31);
+            this.SourceLabel.TabIndex = 0;
+            this.SourceLabel.Text = "Source";
             // 
             // menuStrip1
             // 
@@ -543,6 +527,32 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // SourceTextBox
+            // 
+            this.SourceTextBox.Location = new System.Drawing.Point(18, 51);
+            this.SourceTextBox.Name = "SourceTextBox";
+            this.SourceTextBox.Size = new System.Drawing.Size(100, 38);
+            this.SourceTextBox.TabIndex = 1;
+            this.SourceTextBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.SourceTextBox_MouseDown);
+            // 
+            // TargetLabel
+            // 
+            this.TargetLabel.AutoSize = true;
+            this.TargetLabel.Location = new System.Drawing.Point(584, 17);
+            this.TargetLabel.Name = "TargetLabel";
+            this.TargetLabel.Size = new System.Drawing.Size(93, 31);
+            this.TargetLabel.TabIndex = 0;
+            this.TargetLabel.Text = "Target";
+            // 
+            // TargetTextBox
+            // 
+            this.TargetTextBox.Location = new System.Drawing.Point(584, 51);
+            this.TargetTextBox.Name = "TargetTextBox";
+            this.TargetTextBox.Size = new System.Drawing.Size(100, 38);
+            this.TargetTextBox.TabIndex = 1;
+            this.TargetTextBox.DragEnter += new System.Windows.Forms.DragEventHandler(this.TargetTextBox_DragEnter);
+            this.TargetTextBox.DragOver += new System.Windows.Forms.DragEventHandler(this.TargetTextBox_DragOver);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -594,9 +604,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label SourceLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem newToolStripMenuItem;
@@ -631,5 +639,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.TextBox TargetTextBox;
+        private System.Windows.Forms.Label TargetLabel;
+        private System.Windows.Forms.TextBox SourceTextBox;
     }
 }
